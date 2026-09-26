@@ -29,9 +29,4 @@ public class DashboardController {
     public Map<String, Object> dispatch(@PathVariable String taskId) {
         return service.dispatch(taskId);
     }
-
-    @GetMapping("/reports/work/export")
-    public Map<String, Object> exportReport() {
-        return service.exportReport();
-    }
 }

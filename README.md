@@ -31,7 +31,9 @@ docker compose up -d
 - `GET /api/health`：健康检查
 - `GET /api/dashboard/overview`：调度看板聚合数据，包含农机档案、任务、轨迹、作业记录、保养提醒、驾驶员和 7 日趋势
 - `POST /api/tasks/{taskId}/dispatch`：模拟一键派单
-- `GET /api/reports/work/export`：模拟作业统计导出任务
+- `GET /api/reports/work?period=daily&date=YYYY-MM-DD`：按作业日期汇总的日报（农机、驾驶员、工时、油耗、面积、成本 + 合计 + 对应记录）
+- `GET /api/reports/work?period=monthly&month=YYYY-MM`：按月份汇总的月报
+- `GET /api/reports/work/export?period=...&date|month=...`：导出与所选范围一致的 CSV（含合计行）；范围内无记录时返回 404，不生成空文件
 
 ## 本地开发方式
 

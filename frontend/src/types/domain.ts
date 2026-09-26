@@ -56,6 +56,25 @@ export interface WorkRecord {
   fuelCost: number;
 }
 
+export type ReportPeriod = 'daily' | 'monthly';
+
+export interface WorkReportRow {
+  machineCode: string;
+  driverName: string;
+  actualHours: number;
+  fuelLiters: number;
+  areaMu: number;
+  fuelCost: number;
+}
+
+export interface WorkReport {
+  period: ReportPeriod;
+  rangeLabel: string;
+  rows: WorkReportRow[];
+  totals: WorkReportRow;
+  records: WorkRecord[];
+}
+
 export interface MaintenanceReminder {
   id: string;
   machineCode: string;

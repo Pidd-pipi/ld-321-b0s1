@@ -29,8 +29,4 @@ public class DashboardService {
     public Map<String, Object> dispatch(String taskId) {
         return Map.of("taskId", taskId, "status", "已派单", "message", "系统已按空闲度和驾驶员排班完成推荐派单");
     }
-
-    public Map<String, Object> exportReport() {
-        return Map.of("fileName", "farm-work-report-2026-05.csv", "rows", repo.records().size(), "status", "ready");
-    }
 }
