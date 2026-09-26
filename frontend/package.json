@@ -6,21 +6,25 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 18621",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 18621"
+    "preview": "vite preview --host 0.0.0.0 --port 18621",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "vue": "^3.5.13",
-    "pinia": "^2.3.0",
+    "echarts": "^5.5.1",
     "element-plus": "^2.9.1",
-    "echarts": "^5.5.1"
+    "pinia": "^2.3.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@vue/test-utils": "^2.5.1",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
     "vite": "^6.0.3",
-    "vue-tsc": "^2.1.10",
-    "tailwindcss": "^3.4.17",
-    "postcss": "^8.4.49",
-    "autoprefixer": "^10.4.20"
+    "vitest": "^4.1.11",
+    "vue-tsc": "^2.1.10"
   }
 }

@@ -56,6 +56,16 @@ export interface WorkRecord {
   fuelCost: number;
 }
 
+export type ReportMode = 'daily' | 'monthly';
+
+export interface WorkRecordTotals {
+  count: number;
+  actualHours: number;
+  fuelLiters: number;
+  areaMu: number;
+  fuelCost: number;
+}
+
 export interface MaintenanceReminder {
   id: string;
   machineCode: string;
